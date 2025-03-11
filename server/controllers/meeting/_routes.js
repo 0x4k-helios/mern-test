@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', auth, meeting.index)
 router.post('/add', auth, meeting.add)
-router.post('/view/:id', auth, meeting.index)
+router.get('/view/:id', auth, meeting.view)
 router.delete('/delete/:id', auth, meeting.deleteData)
 router.post('/deleteMany', auth, meeting.deleteMany)
 

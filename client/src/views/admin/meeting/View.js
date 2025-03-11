@@ -29,6 +29,7 @@ const View = () => {
     const fetchData = async () => {
         setIsLoding(true)
         let response = await getApi('api/meeting/view/', param.id)
+        console.log(response?.data)
         setData(response?.data);
         setIsLoding(false)
     }
